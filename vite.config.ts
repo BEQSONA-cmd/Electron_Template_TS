@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     electron({
-      entry: 'src/main.ts',
+      entry: './main.ts',
       onstart(args) {
         args.startup()
       },
