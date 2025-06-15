@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 import path from 'path'
 
 const createWindow = () => {
@@ -11,6 +11,9 @@ const createWindow = () => {
       contextIsolation: true
     }
   })
+
+  // for disabling native menu
+  // Menu.setApplicationMenu(null)
 
   if (process.env.NODE_ENV === 'development') {
     win.loadURL('http://localhost:5173')
