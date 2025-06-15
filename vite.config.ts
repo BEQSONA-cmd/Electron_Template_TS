@@ -6,20 +6,30 @@ export default defineConfig({
   root: 'src',
   plugins: [
     react(),
-    electron({
-      entry: './main.ts',
-      onstart(args) {
-        args.startup()
+    electron([
+      {
+        entry: './main.ts',
+        onstart({ startup }) {
+          startup()
+        },
+        vite: {
+          build: {
+            outDir: 'dist-electron',
+            rollupOptions: {
+              external: ['electron-reload']
+            }
+          }
+        }
       },
-      vite: {
-        build: {
-          outDir: 'dist-electron',
-          rollupOptions: {
-            external: ['electron-reload']
+      {
+        entry: './preload.ts',
+        vite: {
+          build: {
+            outDir: 'dist-electron'
           }
         }
       }
-    }),
+    ]),
   ],
   build: {
     outDir: '../dist',

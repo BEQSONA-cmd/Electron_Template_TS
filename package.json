@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "electron ."
+    "start": "npm run build && electron ."
   },
   "repository": {
     "type": "git",

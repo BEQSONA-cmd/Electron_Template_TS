@@ -9,12 +9,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "src/preload.ts"],
+  "include": ["src/**/*", "preload.ts", "main.ts"],
   "exclude": ["node_modules"]
 }
