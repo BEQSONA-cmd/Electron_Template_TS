@@ -1,5 +1,13 @@
 ## Getting Started
 
+### Installation
+
+Before starting development or building for production, install dependencies:
+
+```bash
+npm install
+```
+
 ### Development
 
 To start the development server, run:
